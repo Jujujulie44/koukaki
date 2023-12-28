@@ -9,21 +9,51 @@
  */
 
 
- /*******************SECTIONS FADE-IN****************/
- 
- .banner img {
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+ /*** SECTION FADE-IN HEADER ***/
 
-  test git 
+ .banner img {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/***SECTION STORY***/
+
+.story{
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+   transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes goUp_background {
+  from{
+      background-position : 0 300px;
+  opacity: 0;
+  }
+  to{
+      background-position: 0 0;
+  opacity: 1;
+  }
+}
+
+h2 {
+  background-image: url('../foce/assets/images/purple_title_bg.png');
+  animation: goUp_background 2s;
+}
 
