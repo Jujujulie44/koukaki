@@ -1,0 +1,88 @@
+/*bblabla
+*/
+/*** SECTION FADE-IN HEADER ***/
+.container-video {
+  position: absolute;
+}
+
+#background-video {
+  object-fit: cover;
+}
+@media (max-width: 599px) {
+  #background-video {
+    display: none;
+  }
+}
+
+.banner img {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn { /* ANIMATION ENTRANTE VERS LE BAS*/
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/***SECTION STORY***/
+.story {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/*** SECTION TITRE STORY ***/
+h2 {
+  background-image: url("../foce/assets/images/purple_title_bg.png");
+  animation: fadeUp_purple_background 2s;
+}
+
+@keyframes fadeUp_purple_background { /*ANIMATION BACKGROUND VIOLET*/
+  from {
+    background-position: 0 300px;
+    opacity: 0;
+  }
+  to {
+    background-position: 0 0;
+    opacity: 1;
+  }
+}
+/*** SECTION "L'HISTOIRE" ROTATION FLEURS ***/
+.story h2::after,
+.story__article::after,
+#studio h2::after {
+  animation: rotationFleurs 15s linear infinite;
+}
+
+@keyframes rotationFleurs {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*** SECTION STUDIO KOUKAKI ***/
+#studio h2::before {
+  animation: rotationFleurs 15s linear infinite;
+}
+
+.story h2 {
+  background-image: url("../foce/assets/images/purple_studio_bg.png");
+  animation: fadeUp_purple_background 2s;
+}
+
+/*** LE LIEU ***/
+.story #place {
+  background-repeat: no-repeat;
+  animation: fadeUp_purple_background 2s;
+}
+
+#place h3 {
+  background-image: url("../foce/assets/images/orange_place_bg.png");
+  animation: fadeUp_purple_background 2s;
+}
+
+/*# sourceMappingURL=style.css.map */
