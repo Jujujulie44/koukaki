@@ -1,5 +1,4 @@
-/*bblabla
-*/
+
  /*** SECTION FADE-IN HEADER ***/
 
  .container-video {
@@ -8,10 +7,12 @@
 
   #background-video {
     object-fit: cover;
-    @media(max-width: 599px) {
+    @media (max-width: 599px) {
       display:none;
     }
   }
+
+  /*** IMAGE LOGO ***/
   
   .banner img {
    animation: fadeIn 1s ease-in-out forwards;
@@ -40,7 +41,7 @@
  
  h2 {
    background-image: url('../foce/assets/images/purple_title_bg.png');
-   animation: fadeUp_purple_background 2s;
+   animation: fadeUp_purple_background 1s;
  }
  
  @keyframes fadeUp_purple_background { /*ANIMATION BACKGROUND VIOLET*/
@@ -53,6 +54,13 @@
    opacity: 1;
    }
  }
+
+ .story__article {
+  p {
+    position: relative; 
+    animation: p-sections-fade-in 1.5s 0.5s forwards;
+  }
+ }
  
  
  
@@ -63,6 +71,11 @@
  #studio h2::after {
    animation: rotationFleurs 15s linear infinite;
  }
+
+ #studio h2::before {
+  animation: rotationFleurs 15s linear infinite;
+}
+
  @keyframes rotationFleurs {
    0% {
      transform: rotate(0);
@@ -75,18 +88,55 @@
  
  /*** SECTION STUDIO KOUKAKI ***/
  
- #studio h2::before {
-   animation: rotationFleurs 15s linear infinite;
- }
  
  .story h2{
    background-image: url('../foce/assets/images/purple_studio_bg.png');
-   animation: fadeUp_purple_background 2s;
+   animation: fadeUp_purple_background 1s;
+ }
+
+ #story,
+ #studio,
+ footer {
+    opacity:0; 
+    animation: sections-fade-in 1.5s 0.5s forwards;
+ }
+
+ @keyframes sections-fade-in {
+    0% {
+      opacity:O; 
+      transform: translateY(150px);
+    }
+    100%  {
+      opacity:1;
+      transform: translayeY(0px);
+    }
+ }
+
+ .studio_paragraphe {
+  position: relative; 
+    animation: p-sections-fade-in 1.5s 0.5s forwards;
  }
  
+ /****KEYFRAMES PARAGRAPHES ***/
+ 
+ @keyframes p-sections-fade-in {
+  0% {
+    opacity : 0;
+    transform : translateY(-150px)
+  }
+  50%{
+    opacity:1; 
+  }
+  100%{
+    transform: translate(0px); 
+  }
+ }
+
+
  /*** LE LIEU ***/
  
  .story #place {
+  background-image: url('../images/place_background.png');
    background-repeat: no-repeat;
    animation: fadeUp_purple_background 2s;
  }
@@ -96,4 +146,68 @@
    animation: fadeUp_purple_background 2s;
  }
  
- 
+ .place_background p {
+  position: relative; 
+  animation: p-sections-fade-in 1.5s 0.5s forwards;
+ }
+ /*** NUAGES ***/
+
+ #big_cloud {
+  position: absolute;
+  top: 69%;
+  display: block;
+left: calc(52% + 210px);
+  filter: drop-shadow(0px 0px 20px #C0F7FF);
+}
+
+#little_cloud {
+  position: absolute;
+  top: 77%;
+left: calc(65% + 320px);
+  filter: drop-shadow(0px 0px 20px #C0F7FF);
+}
+
+/*** section nomination**/
+
+.section-nomination {
+  align-items: flex-start;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+.nomination_text {
+  background-image: url('../images/orange_oscar_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 700px;
+  height:250px;
+  padding: 50px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  color: #fff5e9;
+  font-size: 40px;
+  letter-spacing: -1px;
+  margin-bottom: 8em;
+}
+
+.nomination_img{
+  max-width: 275px;
+}
+
+
+ /****FOOTER **/
+
+ .site-footer {
+  flex-direction: column;
+  padding-top: 12em;
+}
+
+.site-footer::after {
+  top: 0;
+}
+
+.site-footer::before {
+  top: 4em;
+}
