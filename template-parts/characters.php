@@ -7,6 +7,7 @@
 
             );
             
+            
             $characters_query = new WP_Query($args);
             ?>
         

@@ -26,8 +26,8 @@ get_header();
             <!--LIEU-->
             <article id="place" class="place_background">
                 <div>
-                    <img id="big_cloud" src="<?php echo get_stylesheet_directory_uri().'/assets/images/big_cloud.png'; ?>" alt="big_cloud" />
-                    <img id="little_cloud" src="<?php echo get_stylesheet_directory_uri().'/assets/images/little_cloud.png'; ?>" alt="little_cloud" />
+                    <img class="big_cloud" src="<?php echo get_stylesheet_directory_uri().'/assets/images/big_cloud.png'; ?>" alt="big_cloud" />
+                    <img class="little_cloud" src="<?php echo get_stylesheet_directory_uri().'/assets/images/little_cloud.png'; ?>" alt="little_cloud" />
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
