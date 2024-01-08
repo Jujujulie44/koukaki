@@ -73,22 +73,11 @@
  .story{
   animation: fade-In-From-Bottom 1s ease-in-out;
 }
- 
+ /*
  .story h2 {
    background-image: url('../foce/assets/images/purple_title_bg.png');
    animation: fadeUp_purple_background 1s;
- }
- 
- @keyframes fadeUp_purple_background { /*ANIMATION BACKGROUND VIOLET*/
-   from{
-       background-position : 0 300px;
-   opacity: 0;
-   }
-   to{
-       background-position: 0 0;
-   opacity: 1;
-   }
- }
+ }*/
 
  .story__article {
   p {
@@ -96,20 +85,47 @@
     animation: p-sections-fade-in 1.5s 0.5s forwards;
   }
  }
+
+ @keyframes fadeUp_purple_background { /*ANIMATION BACKGROUND VIOLET*/
+  from{
+      background-position : 0 300px;
+  opacity: 0;
+  }
+  to{
+      background-position: 0 0;
+  opacity: 1;
+  }
+}
+
+/****KEYFRAMES PARAGRAPHES ***/
+ 
+@keyframes p-sections-fade-in {
+  0% {
+    opacity : 0;
+    transform : translateY(-150px)
+  }
+  50%{
+    opacity:1; 
+  }
+  100%{
+    transform: translate(0px); 
+  }
+ }
  
  
- 
- /*** SECTION "L'HISTOIRE" ROTATION FLEURS ***/
+ /*** ROTATION FLEURS ***/
  
  .story h2::after,
  .story__article::after,
- #studio h2::after {
+ #studio h2::after,
+ #studio h2::before,
+ .site-footer::before,
+ /*.site-footer::after,*/
+ .site-footer ul::after  {
    animation: rotationFleurs 15s linear infinite;
  }
 
- #studio h2::before {
-  animation: rotationFleurs 15s linear infinite;
-}
+/**KEYFRAMES ROTATION FLEURS **/
 
  @keyframes rotationFleurs {
    0% {
@@ -122,51 +138,18 @@
  
  
  /*** SECTION STUDIO KOUKAKI ***/
- 
- 
- .story h2{
-   background-image: url('../foce/assets/images/purple_studio_bg.png');
-   animation: fadeUp_purple_background 1s;
- }
 
  #story,
  #studio,
  footer {
     opacity:0; 
-    animation: sections-fade-in 1.5s 0.5s forwards;
- }
-
- @keyframes sections-fade-in {
-    0% {
-      opacity:O; 
-      transform: translateY(150px);
-    }
-    100%  {
-      opacity:1;
-      transform: translayeY(0px);
-    }
+    animation: fade-In-From-Bottom 1.5s 0.5s forwards;
  }
 
  .studio_paragraphe {
   position: relative; 
     animation: p-sections-fade-in 1.5s 0.5s forwards;
  }
- 
- /****KEYFRAMES PARAGRAPHES ***/
- 
- @keyframes p-sections-fade-in {
-  0% {
-    opacity : 0;
-    transform : translateY(-150px)
-  }
-  50%{
-    opacity:1; 
-  }
-  100%{
-    transform: translate(0px); 
-  }
- }
-
 
  /*** LE LIEU ***/
  
@@ -225,6 +208,7 @@ left: calc(65% + 320px);
   font-size: 40px;
   letter-spacing: -1px;
   margin-bottom: 8em;
+  text-shadow: grey 1px 0 10px;
 }
 
 .nomination_img{

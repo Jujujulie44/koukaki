@@ -82,7 +82,7 @@ h2 {
 
 .story h2{
   background-image: url('../foce/assets/images/purple_studio_bg.png');
-  animation: fadeUp_purple_background 2s;
+  /*animation: fadeUp_purple_background 2s;*/
 }
 
 /*** LE LIEU ***/

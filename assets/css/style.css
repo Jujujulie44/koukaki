@@ -67,9 +67,14 @@
   animation: fade-In-From-Bottom 1s ease-in-out;
 }
 
+/*
 .story h2 {
-  background-image: url("../foce/assets/images/purple_title_bg.png");
+  background-image: url('../foce/assets/images/purple_title_bg.png');
   animation: fadeUp_purple_background 1s;
+}*/
+.story__article p {
+  position: relative;
+  animation: p-sections-fade-in 1.5s 0.5s forwards;
 }
 
 @keyframes fadeUp_purple_background { /*ANIMATION BACKGROUND VIOLET*/
@@ -82,58 +87,6 @@
     opacity: 1;
   }
 }
-.story__article p {
-  position: relative;
-  animation: p-sections-fade-in 1.5s 0.5s forwards;
-}
-
-/*** SECTION "L'HISTOIRE" ROTATION FLEURS ***/
-.story h2::after,
-.story__article::after,
-#studio h2::after {
-  animation: rotationFleurs 15s linear infinite;
-}
-
-#studio h2::before {
-  animation: rotationFleurs 15s linear infinite;
-}
-
-@keyframes rotationFleurs {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/*** SECTION STUDIO KOUKAKI ***/
-.story h2 {
-  background-image: url("../foce/assets/images/purple_studio_bg.png");
-  animation: fadeUp_purple_background 1s;
-}
-
-#story,
-#studio,
-footer {
-  opacity: 0;
-  animation: sections-fade-in 1.5s 0.5s forwards;
-}
-
-@keyframes sections-fade-in {
-  0% {
-    opacity: O;
-    transform: translateY(150px);
-  }
-  100% {
-    opacity: 1;
-    transform: translayeY(0px);
-  }
-}
-.studio_paragraphe {
-  position: relative;
-  animation: p-sections-fade-in 1.5s 0.5s forwards;
-}
-
 /****KEYFRAMES PARAGRAPHES ***/
 @keyframes p-sections-fade-in {
   0% {
@@ -147,6 +100,38 @@ footer {
     transform: translate(0px);
   }
 }
+/*** ROTATION FLEURS ***/
+.story h2::after,
+.story__article::after,
+#studio h2::after,
+#studio h2::before,
+.site-footer::before,
+.site-footer ul::after {
+  animation: rotationFleurs 15s linear infinite;
+}
+
+/**KEYFRAMES ROTATION FLEURS **/
+@keyframes rotationFleurs {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*** SECTION STUDIO KOUKAKI ***/
+#story,
+#studio,
+footer {
+  opacity: 0;
+  animation: fade-In-From-Bottom 1.5s 0.5s forwards;
+}
+
+.studio_paragraphe {
+  position: relative;
+  animation: p-sections-fade-in 1.5s 0.5s forwards;
+}
+
 /*** LE LIEU ***/
 .story #place {
   background-image: url("../images/place_background.png");
@@ -200,6 +185,7 @@ footer {
   font-size: 40px;
   letter-spacing: -1px;
   margin-bottom: 8em;
+  text-shadow: grey 1px 0 10px;
 }
 
 .nomination_img {
