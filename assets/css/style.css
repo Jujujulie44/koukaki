@@ -141,7 +141,7 @@ footer {
 
 #place h3 {
   background-image: url("../foce/assets/images/orange_place_bg.png");
-  animation: fadeUp_purple_background 2s;
+  /*animation: fadeUp_purple_background 2s;*/
 }
 
 .place_background p {
@@ -204,6 +204,30 @@ footer {
 
 .site-footer::before {
   top: 4em;
+}
+
+/*** SWIPER ***/
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.swiper-slide-image {
+  width: 100%;
+}
+
+.swiper-pagination {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

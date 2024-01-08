@@ -24,16 +24,27 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
 }, { rootMargin: '-100px 0px -100px 0px' });
 
 
+
 // Initialise Swiper pour l'effet de carrousel
-var mySwiper = new Swiper('.swiper-container', {
+const mySwiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 'auto',
+    loop: true,
     pagination: {
         el: '.swiper-pagination',
       },
     spaceBetween: 20,
-    })
-  ;
+    scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+
   
