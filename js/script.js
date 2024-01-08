@@ -12,3 +12,13 @@ window.addEventListener('scroll', () => {
   littleCloud.style.transform = 'translateX(' + (decalageLittleCloud + -300) + 'px)'
     
 })
+
+
+const sectionObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            fadeInAnimation(entry);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { rootMargin: '-100px 0px -100px 0px' });
