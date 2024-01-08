@@ -2,7 +2,7 @@
 
 
 
-
+const titles = document.getElementsByTagName('span')
 const sectionObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
