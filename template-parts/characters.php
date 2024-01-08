@@ -9,31 +9,43 @@
             
             $characters_query = new WP_Query($args);
             ?>
-            
+        
 
             <article id="characters">
                 <div class="main-character">
-                    <h3>Les personnages</h3>
-                    <?php
-                    $main_character = $characters_query->posts[0];
-                    echo '<figure>';
-                    echo get_the_post_thumbnail( $main_character->ID, 'full' );
-                    echo '<figcaption>'. $main_character->post_title . '</figcaption>';
-                    echo '</figure>';
-                    $characters_query->next_post();
-                    ?>
-                </div>
-                <div class="other-characters">
-                    <?php
-                    while ( $characters_query->have_posts() ) {
-                        $characters_query->the_post();
-                        echo '<figure>';
-                        echo get_the_post_thumbnail( get_the_ID(), 'full' );
-                        echo '<figcaption>';
-                        the_title();
-                        echo'</figcaption>';
-                        echo '</figure>';
-                    }
-                    ?>
-                </div>
-            </article>
+                <h3><span class="title characters__title hide">Les personnages</span></h3>
+        <!-- Initialize the Swiper container for the characters list -->
+                <div class="swiper-container">
+        <!-- Wrapper for Swiper slides -->
+                <div class="swiper-wrapper" style="display: flex;">
+                <?php
+                // Duplicate the characters list to allow infinite scrolling in Swiper
+                $duplicated_characters = array_merge($characters_query->posts, $characters_query->posts);
+                // Loop through the characters list
+                foreach ($duplicated_characters as $post) :
+                    // Set up data for the current post
+                    setup_postdata($post);
+                ?>
+                    <!-- Individual slide in Swiper -->
+                    <div class="swiper-slide" style="flex: 0 0 calc(100% / 3);">
+                        <figure style="overflow: hidden;">
+                            <!-- Display the featured image of the current post -->
+                            <?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('style' => 'height: 100%; object-fit: cover;')); ?>
+                        </figure>
+                        <figcaption>
+                            <!-- Display the title of the current post -->
+                            <?php the_title(); ?>
+                        </figcaption>
+                    </div>
+                <?php
+                // End the loop for characters
+                endforeach;
+                // Reset post data after the loop
+                wp_reset_postdata();
+                ?>
+            </div>
+            <!-- Swiper Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</article>

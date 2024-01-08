@@ -22,6 +22,7 @@ get_header();
             <!-- CHARATERES -->
            <?php get_template_part('template-parts/characters') ;?>
 
+
             <!--LIEU-->
             <article id="place" class="place_background">
                 <div>
@@ -29,7 +30,6 @@ get_header();
                     <img id="little_cloud" src="<?php echo get_stylesheet_directory_uri().'/assets/images/little_cloud.png'; ?>" alt="little_cloud" />
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
-                    
                 </div>
 
             </article>
