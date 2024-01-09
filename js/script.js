@@ -1,9 +1,8 @@
-
 console.log("hello world");
 
 
-/*** OBSERVER ***/
-const titles = document.getElementsByTagName('span')
+// Crée un observer pour gérer l'animation
+
 const sectionObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -13,39 +12,23 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
     });
 }, { rootMargin: '-100px 0px -100px 0px' });
 
+// Sélection des sections à animer
+const sections = document.querySelectorAll('.story, #characters, #place, #studio, footer');
+
+// Ajout de l'observateur d'intersection à chaque section
+sections.forEach((section) => {
+    sectionObserver.observe(section);
+});
 
 
-// Initialise Swiper pour l'effet de carrousel
 
-const mySwiper = new Swiper('.swiper-container', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-      },
-    spaceBetween: 20,
-    scrollbar: {
-        el: '.swiper-scrollbar',
-      },
+// Variables pour le mouvement des nuages
 
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-
-
- // Variables pour le mouvement des nuages
 let cloudPositionX = 0;
 let isCloudMoving = false;
-
 // Éléments pour le mouvement des nuages
 const root = document.documentElement;
 const locationElement = document.querySelector("#place");
-
 //Gestion du scroll pour impacter le mouvement des nuages et la rotation des fleurs
 window.addEventListener("scroll", () => {
   var vertical = -1;
@@ -60,7 +43,9 @@ window.addEventListener("scroll", () => {
       }
     }, 500)
   ;
+
   // Déplace les nuages en fonction du scroll
+
     cloudPositionX = Math.round(0 - (window.scrollY - locationElement.offsetTop - 200));
     if (cloudPositionX <= 0 && cloudPositionX > -400) {
       root.style.setProperty("--cloudPositionX", cloudPositionX + "px");
@@ -68,6 +53,16 @@ window.addEventListener("scroll", () => {
   })
 ;
 
+// Initialise Swiper pour l'effet de carrousel
 
-
-  
+var mySwiper = new Swiper('.swiper-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  pagination: {
+      el: '.swiper-pagination',
+    },
+  spaceBetween: 20,
+  })
+;

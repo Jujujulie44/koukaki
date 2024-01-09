@@ -17,9 +17,22 @@ if ( get_stylesheet() !== get_template() ) {
     } );
 
  // Enqueue le script Swiper
- 
+
  wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.js', array('jquery'), '6.8.4', true);
  // Enqueue le script du thème enfant
- wp_enqueue_script('script', get_theme_file_uri('/assets/js/script.js'), array('jquery', 'swiper'), '1.0.0', true);
+ wp_enqueue_script('script', get_theme_file_uri('/js/script.js'), array('jquery', 'swiper'), '1.0.0', true);
 
 }
+
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+// Synchronisation des modifications entre le thème enfant et le thème parent
+if (get_stylesheet() !== get_template()) {
+    add_filter('pre_update_option_theme_mods_' . get_stylesheet(), function ($valeur, $ancienne_valeur) {
+        update_option('theme_mods_' . get_template(), $valeur);
+        return $ancienne_valeur;
+    }, 10, 2);
+    add_filter('pre_option_theme_mods_' . get_stylesheet(), function ($par_defaut) {
+        return get_option('theme_mods_' . get_template(), $par_defaut);
+    });
+}
+?>
