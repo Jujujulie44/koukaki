@@ -190,21 +190,6 @@ footer {
   z-index: 2;
 }
 
-/*
-#place .cloud-large {
-  height: 122px;
-  top: 70px;
-  right: 90px;
-  transform: translateX(var(--cloudPositionX));
-}
-#place .cloud-small {
-  height: 55px;
-  top: 250px;
-  right: 500px;
-  transform: translateX(var(--cloudPositionX));
-}
-
-*/
 /*** section nomination**/
 .section-nomination {
   align-items: flex-start;

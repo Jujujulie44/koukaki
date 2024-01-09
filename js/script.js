@@ -1,7 +1,8 @@
 
+console.log("hello world");
 
 
-
+/*** OBSERVER ***/
 const titles = document.getElementsByTagName('span')
 const sectionObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
