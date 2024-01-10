@@ -22,6 +22,11 @@ sections.forEach((section) => {
 
 
 
+
+
+
+
+
 // Variables pour le mouvement des nuages
 
 let cloudPositionX = 0;
