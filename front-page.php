@@ -18,7 +18,7 @@ get_header();
                 <span class="title-animation">L'</span>
                 <span class="title-animation">histoire</span>
             </h2>
-            <article id="" class="story__article">
+            <article id="story" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
 
@@ -31,7 +31,7 @@ get_header();
                 <div>
                     <img class="big_cloud" src="<?php echo get_stylesheet_directory_uri().'/assets/images/big_cloud.png'; ?>" alt="big_cloud" />
                     <img class="little_cloud" src="<?php echo get_stylesheet_directory_uri().'/assets/images/little_cloud.png'; ?>" alt="little_cloud" />
-                    <h3>Le Lieu</h3>
+                    <h3><span class="title location__title hidden">Le Lieu</span></h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
 

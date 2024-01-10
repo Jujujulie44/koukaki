@@ -1,4 +1,13 @@
 @charset "UTF-8";
+:root {
+  --rotate: 15s;
+  --posX: 0;
+}
+
+#page {
+  position: relative;
+}
+
 /*** SECTION FADE-IN HEADER ***/
 .container-video {
   position: absolute;
