@@ -23,8 +23,9 @@ get_header();
             </article>
 
             <!-- CHARATERES -->
-           <?php get_template_part('template-parts/characters') ;?>
-
+            <article>
+                <?php get_template_part('template-parts/characters') ;?>
+            </article>
 
             <!--LIEU-->
             <article id="place" class="place_background">
