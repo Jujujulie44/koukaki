@@ -18,7 +18,7 @@ get_header();
                 <span class="title-animation">L'</span>
                 <span class="title-animation">histoire</span>
             </h2>
-            <article id="story" class="story__article">
+            <article class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
 
