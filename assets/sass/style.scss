@@ -80,15 +80,33 @@
  .story{
   animation: fade-In-From-Bottom 1s ease-in-out;
 }
+
+.title-animation{
+  animation: anim-title 1s 1s forwards ;
+}
+
+@keyframes anim-title {
+  0%{
+    transform: translate3d(-50%, 50%, 0);
+    opacity: 0;
+  }
+  100%{
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 1;
+  }
+}
+
  /*
  .story h2 {
    background-image: url('../foce/assets/images/purple_title_bg.png');
    animation: fadeUp_purple_background 1s;
  }*/
+
+ /*
  
  .title-animation {
   display: inline-block;
-  opacity: 0; /* Assurez-vous que les éléments sont initialement invisibles */
+  opacity: 0; /* Assurez-vous que les éléments sont initialement invisibles 
 }
 
 .title-animation:nth-child(1) {
@@ -97,9 +115,9 @@
 
 .title-animation:nth-child(2) {
   animation: fade-In-From-Bottom 0.5s ease-in-out forwards;
-  animation-delay: 0.4s; /* Décalage pour le deuxième élément "histoire" */
+  animation-delay: 0.4s; /* Décalage pour le deuxième élément "histoire" 
 }
-
+*/
 
  .story__article {
   p {
