@@ -60,9 +60,11 @@ var mySwiper = new Swiper('.swiper-container', {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: 'auto',
+
   pagination: {
       el: '.swiper-pagination',
     },
+
   spaceBetween: 20,
   })
 ;
