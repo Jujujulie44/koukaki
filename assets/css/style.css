@@ -157,8 +157,7 @@ footer {
   animation: fade-In-From-Bottom 1.5s 0.5s forwards;
 }
 
-#studio > div {
-  position: relative;
+.studio_paragraphe {
   animation: p-sections-fade-in 1.5s 0.5s forwards;
 }
 
