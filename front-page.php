@@ -15,17 +15,17 @@ get_header();
         </section>
         <section id="#story" class="story">
             <h2>
-                <span class="title-animation">L'</span>
-                <span class="title-animation">histoire</span>
+                <span class="title">L'</span>
+                <span class="title">histoire</span>
             </h2>
             <article class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
 
             <!-- CHARATERES -->
-            <article>
-                <?php get_template_part('template-parts/characters') ;?>
-            </article>
+            
+                <?php get_template_part('template-parts/personnages') ;?>
+            
 
             <!--LIEU-->
             <article id="place" class="place_background">

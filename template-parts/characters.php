@@ -18,9 +18,9 @@
 
                 
         <!-- Initialize the Swiper container for the characters list -->
-                <div class="swiper-container">
+                <div class="swiper">
         <!-- Wrapper for Swiper slides -->
-                <div class="swiper-wrapper" style="display: flex;">
+                <div class="swiper-wrapper">
                 <?php
                 // Duplicate the characters list to allow infinite scrolling in Swiper
                 $duplicated_characters = array_merge($characters_query->posts, $characters_query->posts);
@@ -30,15 +30,17 @@
                     setup_postdata($post);
                 ?>
                     <!-- Individual slide in Swiper -->
-                    <div class="swiper-slide" style="flex: 0 0 calc(100% / 3);">
-                        <figure style="overflow: hidden;">
+                    <div class="swiper-slide">
+                        <figure>
                             <!-- Display the featured image of the current post -->
-                            <?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('style' => 'height: 100%; object-fit: cover;')); ?>
-                        </figure>
-                        <figcaption>
+                            <?php echo get_the_post_thumbnail(get_the_ID(), 'full'); ?>
+                            <figcaption>
                             <!-- Display the title of the current post -->
                             <?php the_title(); ?>
-                        </figcaption>
+                            </figcaption>
+
+                        </figure>
+                        
                     </div>
                 <?php
                 // End the loop for characters

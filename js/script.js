@@ -1,77 +1,85 @@
-console.log("hello world");
+//console.log("hello world");
 
-
-
-// Crée un observer pour gérer l'animation
-
+// Crée un observateur pour gérer l'animation
 const sectionObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            fadeInAnimation(entry);
-            observer.unobserve(entry.target);
-        }
-    });
-}, { rootMargin: '-100px 0px -100px 0px' });
+  entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+          entry.target.classList.add('title-animation')
+          observer.unobserve(entry.target);
+
+      }
+  });
+}, { rootMargin: '0px', threshold: 0.5 });
+
 
 // Sélection des sections à animer
-const sections = document.querySelectorAll('#story, #characters, #place, #studio, footer');
+const sections = document.querySelectorAll('span');
 
 // Ajout de l'observateur d'intersection à chaque section
 sections.forEach((section) => {
-    sectionObserver.observe(section);
+  sectionObserver.observe(section);
 });
 
 
 
-
-
-
-
 // Variables pour le mouvement des nuages
-
 let cloudPositionX = 0;
-let isCloudMoving = false;
+
 // Éléments pour le mouvement des nuages
-const root = document.documentElement;
+const root = document.querySelector(':root');
 const locationElement = document.querySelector("#place");
-//Gestion du scroll pour impacter le mouvement des nuages et la rotation des fleurs
+
+
+// Gestion du scroll pour impacter le mouvement des nuages et la rotation des fleurs
 window.addEventListener("scroll", () => {
-  var vertical = -1;
-    setInterval(function () {
-    // Déplace les fleurs en fonction du scroll
-    if (window.scrollY != vertical) {
-        vertical = window.scrollY;
-        root.style.setProperty("--rotate", "10s");
-      }
-      else {
-        root.style.setProperty("--rotate", "15s");
-      }
-    }, 500)
-  ;
+    root.style.setProperty('--speed', '0.5s')
 
-  // Déplace les nuages en fonction du scroll
-
+    // Déplace les nuages en fonction du scroll
     cloudPositionX = Math.round(0 - (window.scrollY - locationElement.offsetTop - 200));
-    if (cloudPositionX <= 0 && cloudPositionX > -400) {
-      root.style.setProperty("--cloudPositionX", cloudPositionX + "px");
+    if (cloudPositionX <= 0 && cloudPositionX > -300) {
+        root.style.setProperty("--cloudPositionX", cloudPositionX + "px");
     }
-  });
+});
+
+window.addEventListener("scrollend", () => {
+  root.style.setProperty('--speed', '10s')
+})
+  
+
+
 
 
 // Initialise Swiper pour l'effet de carrousel
 
-var mySwiper = new Swiper('.swiper-container', {
+/*Swiper personnages*/
 
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const swiper = new Swiper('.swiper', {
+  loop: true,
   slidesPerView: 'auto',
-
-  pagination: {
-      el: '.swiper-pagination',
+  centeredSlides: true,
+  effect: "coverflow",
+  coverflowEffect: {
+  rotate: 0,                      
+  depth: 200,                     
+  stretch: 0,                    
+  slideShadows: false,            
+  },
+  autoplay: isMobile ? false : {
+  delay: 2000,
+  disableOnInteraction: false,
+  },
+  breakpoints:{
+    0: {
+      slidesPerView: 1,
     },
-
-  spaceBetween: 20,
-  });
+    320:{
+      slidesPerView: 2,
+    },
+    996:{
+      slidesPerView: 5,
+    }
+  }
+});
 
 
