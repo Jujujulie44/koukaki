@@ -1,6 +1,5 @@
 console.log("hello world");
 
-
 // Crée un observer pour gérer l'animation
 
 const sectionObserver = new IntersectionObserver((entries, observer) => {
@@ -19,12 +18,6 @@ const sections = document.querySelectorAll('.story, #characters, #place, #studio
 sections.forEach((section) => {
     sectionObserver.observe(section);
 });
-
-
-
-
-
-
 
 
 // Variables pour le mouvement des nuages
@@ -61,6 +54,7 @@ window.addEventListener("scroll", () => {
 // Initialise Swiper pour l'effet de carrousel
 
 var mySwiper = new Swiper('.swiper-container', {
+  
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
@@ -71,5 +65,6 @@ var mySwiper = new Swiper('.swiper-container', {
     },
 
   spaceBetween: 20,
-  })
-;
+  });
+
+
