@@ -15,6 +15,8 @@
             <article id="characters">
                 <div class="main-character">
                 <h3><span class="title characters__title hide">Les personnages</span></h3>
+
+                
         <!-- Initialize the Swiper container for the characters list -->
                 <div class="swiper-container">
         <!-- Wrapper for Swiper slides -->
