@@ -172,7 +172,7 @@
  
  
  /*** SECTION STUDIO KOUKAKI ***/
-
+ 
  #story,
  #studio,
  footer {
@@ -180,7 +180,7 @@
     animation: fade-In-From-Bottom 1.5s 0.5s forwards;
  }
 
- .studio_paragraphe {
+ #studio > div {
   position: relative; 
     animation: p-sections-fade-in 1.5s 0.5s forwards;
  }
