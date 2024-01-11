@@ -1,5 +1,7 @@
 console.log("hello world");
 
+
+
 // Crée un observer pour gérer l'animation
 
 const sectionObserver = new IntersectionObserver((entries, observer) => {
@@ -12,12 +14,17 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
 }, { rootMargin: '-100px 0px -100px 0px' });
 
 // Sélection des sections à animer
-const sections = document.querySelectorAll('.story, #characters, #place, #studio, footer');
+const sections = document.querySelectorAll('#story, #characters, #place, #studio, footer');
 
 // Ajout de l'observateur d'intersection à chaque section
 sections.forEach((section) => {
     sectionObserver.observe(section);
 });
+
+
+
+
+
 
 
 // Variables pour le mouvement des nuages
@@ -48,13 +55,13 @@ window.addEventListener("scroll", () => {
     if (cloudPositionX <= 0 && cloudPositionX > -400) {
       root.style.setProperty("--cloudPositionX", cloudPositionX + "px");
     }
-  })
-;
+  });
+
 
 // Initialise Swiper pour l'effet de carrousel
 
 var mySwiper = new Swiper('.swiper-container', {
-  
+
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
