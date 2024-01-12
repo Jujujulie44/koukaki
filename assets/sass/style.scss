@@ -1,5 +1,5 @@
 :root {
-  --speed : 10s; 
+  --speed : 8s; 
 }
 
  /*** SECTION FADE-IN HEADER ***/
@@ -78,25 +78,6 @@
  .story{
   animation: fade-In-From-Bottom 1s ease-in-out;
 }
-
-
-
-/*
-.title-animation{
-  animation: anim-title 1s 1s forwards ;
-}
-
-@keyframes anim-title {
-  0%{
-    transform: translate3d(-50%, 50%, 0);
-    opacity: 0;
-  }
-  100%{
-    transform: translate3d(-50%, -50%, 0);
-    opacity: 1;
-  }
-}*/
-
  
  .story h2 {
    background-image: url('../../../foce/assets/images/purple_title_bg.png');
@@ -118,23 +99,28 @@
   animation: fade-In-From-Bottom 1.3s ease-in-out forwards;
   animation-delay: 0.4s; /* Décalage pour le deuxième élément "histoire" 
 }
-*/
+
 h2 {
   overflow: hidden;
 }
-h2 span {
-  transform: translateY(100%);
+
+h2 span, h3 span {  
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 1s, opacity 0.5s;
 }
 
 .title-animation{
-  /*animation: title-animation 1s ease-in-out forwards ;*/
+  /*animation: title-animation 1s ease-in-out forwards ;
 }
-
+*/
 @keyframes title-animation {
   100%{
     transform: translateY(0%);
   }
 }
+
 
  .story__article {
   p {
@@ -189,12 +175,16 @@ h2 span {
   width: 109px;
   height: 109px;
  }
-/*
- #studio h2::before
+
+ #studio h2::before {
+  top: 0; 
+ }
+ /*
  .site-footer::before
  .site-footer::after
  .site-footer ul::after
 */
+
 /**KEYFRAMES ROTATION FLEURS **/
 
  @keyframes rotationFleurs {
@@ -316,9 +306,9 @@ h2 span {
 
 /*** SWIPER ***/
 
-.swiper{
+.swiper {
   margin: 0 auto;
-  width: 750px;
+  width: 1226px;
 }
 
 .characters-swiper {
