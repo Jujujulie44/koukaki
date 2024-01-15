@@ -40,13 +40,12 @@
 
             <img class ="logoFullscreen" src="<?php echo get_theme_file_uri() . '/assets/images/logoMenu.png'; ?>" alt="logo menu fullscreen">
             <img class ="orchidMenu" src="<?php echo get_theme_file_uri() . '/assets/images/orchid.png'; ?>" alt="logo menu fullscreen">
-            <img class ="flowerMenu" src="<?php echo get_theme_file_uri() . '/assets/images/Flower.png'; ?>" alt="logo menu fullscreen">
             <img class ="sunflowerMenu" src="<?php echo get_theme_file_uri() . '/assets/images/Sunflower.png'; ?>" alt="logo menu fullscreen">
-            <img class ="randomflowerMenu" src="<?php echo get_theme_file_uri() . '/assets/images/RandomFlower.png'; ?>" alt="logo menu fullscreen">
-            <img class ="hibiscusMenu" src="<?php echo get_theme_file_uri() . '/assets/images/HibiscusFooter.png'; ?>" alt="logo menu fullscreen">
-            <img class ="blueCatMenu" src="<?php echo get_theme_file_uri() . '/assets/images/blueCat.png'; ?>" alt="logo menu fullscreen">
-            <img class ="orangeCatMenu" src="<?php echo get_theme_file_uri() . '/assets/images/OrangeCat.png'; ?>" alt="logo menu fullscreen">
-            <img class ="blackCatMenu" src="<?php echo get_theme_file_uri() . '/assets/images/blackCat.png'; ?>" alt="logo menu fullscreen">
+            <img class ="randomflowerMenu" src="<?php echo get_theme_file_uri() . '/assets/images/random_flower.png'; ?>" alt="logo menu fullscreen">
+            <img class ="hibiscusMenu" src="<?php echo get_theme_file_uri() . '/assets/images/hibiscus_footer.png'; ?>" alt="logo menu fullscreen">
+            <img class ="blueCatMenu" src="<?php echo get_theme_file_uri() . '/assets/images/cat-purple.png'; ?>" alt="logo menu fullscreen">
+            <img class ="orangeCatMenu" src="<?php echo get_theme_file_uri() . '/assets/images/cat-orange.png'; ?>" alt="logo menu fullscreen">
+            <img class ="blackCatMenu" src="<?php echo get_theme_file_uri() . '/assets/images/cat-black.png'; ?>" alt="logo menu fullscreen">
         
             <ul>
                 <li><a href="#story">Histoire</a></li>
@@ -58,5 +57,5 @@
 
         </div>
     </header><!-- #masthead -->
-    
+
 </div>
