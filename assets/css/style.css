@@ -368,6 +368,14 @@ footer {
   position: fixed;
 }
 
+.fullscreenMenu li {
+  line-height: 90px;
+}
+
+.fullscreenMenu p {
+  margin-top: 100px;
+}
+
 .fullscreenMenu {
   position: fixed;
   top: 80px;
