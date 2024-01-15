@@ -84,10 +84,6 @@
    animation: fadeUp_purple_background 1s;
  }
 
-h2 {
-  overflow: hidden;
-}
-
 span {
   display: inline-block;
   opacity: 0;
@@ -95,23 +91,16 @@ span {
   transition: transform 1s, opacity 0.5s;
  }
 
- 
- /*
- .title-animation {
-  display: inline-block;
-  opacity: 0; /* Assurez-vous que les éléments sont initialement invisibles 
-}
-
 .title-animation:nth-child(1) {
   animation: fade-In-From-Bottom 1s ease-in-out forwards;
 }
 
-.title-animation:nth-child(2) {
+ 
+ .title-animation:nth-child(2) {
   animation: fade-In-From-Bottom 1.3s ease-in-out forwards;
-  animation-delay: 0.4s; /* Décalage pour le deuxième élément "histoire" 
+  animation-delay: 0.4s; /* Décalage pour le deuxième élément "histoire" */
 }
 
-*/
 @keyframes title-animation {
   100%{
     transform: translateY(0%);
