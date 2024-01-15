@@ -79,6 +79,17 @@
   animation: fadeUp_purple_background 1s;
 }
 
+h2 {
+  overflow: hidden;
+}
+
+span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 1s, opacity 0.5s;
+}
+
 /*
  .title-animation {
   display: inline-block;
@@ -94,20 +105,6 @@
   animation-delay: 0.4s; /* Décalage pour le deuxième élément "histoire" 
 }
 
-h2 {
-  overflow: hidden;
-}
-
-h2 span, h3 span {  
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(100px);
-  transition: transform 1s, opacity 0.5s;
-}
-
-.title-animation{
-  /*animation: title-animation 1s ease-in-out forwards ;
-}
 */
 @keyframes title-animation {
   100% {
@@ -153,24 +150,15 @@ h2 span, h3 span {
   animation: rotationFleurs var(--speed) linear infinite;
 }
 
-/*
- .story h2::after
- .story__article::after
-*/
+.story h2::after, #studio h2::before {
+  transform-origin: 50% 45%;
+}
+
 #studio h2::after {
   width: 109px;
   height: 109px;
 }
 
-#studio h2::before {
-  top: 0;
-}
-
-/*
- .site-footer::before
- .site-footer::after
- .site-footer ul::after
-*/
 /**KEYFRAMES ROTATION FLEURS **/
 @keyframes rotationFleurs {
   0% {
