@@ -23,6 +23,7 @@ get_header();
             </article>
 
             <!-- CHARATERES -->
+                
             
                 <?php get_template_part('template-parts/personnages') ;?>
             

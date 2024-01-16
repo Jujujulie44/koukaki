@@ -420,7 +420,7 @@ span {
 }
 
 .fullscreenMenu p {
-  margin-top: 100px;
+  margin-top: 70px!important;
 }
 
 
@@ -467,7 +467,7 @@ span {
   li {
       font-weight: 500;
       font-size: 40px;
-      line-height: 120px;
+      line-height: 100px;
       list-style-type: none;
       margin: 0;
   }
@@ -500,10 +500,18 @@ span {
       width: 150px;
       height: 148px;
       top: 70px;
+      animation: rotationFleurs var(--speed) linear infinite;
+  }
+
+  .flowerOrangeMenu {
+      position: absolute;
+      left: 23%;
+      bottom: 55%;
+      animation: rotationFleurs var(--speed) linear infinite;
+
   }
 
   .flowerMenu {
-      position: absolute;
       position: absolute;
       top: 435px;
       left: 289px;
@@ -513,55 +521,53 @@ span {
 
   .sunflowerMenu {
       position: absolute;
-      position: absolute;
       top: 90px;
       left: 950px;
-      width: 216px;
-      height: 216px;
+      animation: rotationFleurs var(--speed) linear infinite;
   }
 
   .randomflowerMenu {
       position: absolute;
-      position: absolute;
-      top: 370px;
-      left: 1396px;
-      width: 75px;
+      top: 350px;
+      left: 1403px;
       height: 75px;
+      animation: rotationFleurs var(--speed) linear infinite;
   }
 
   .hibiscusMenu {
-      position: absolute;
-      position: absolute;
-      top: 595px;
-      left: 1100px;
-      width: 626px;
-      height: 626px;
-  }
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 325px;
+    right: 0px;
+    /*animation: rotationFleurs var(--speed) linear infinite;
+    transform-origin: 50% 45%;*/
+}
 
   .blueCatMenu {
-      position: absolute;
-      position: absolute;
-      top: 185px;
-      left: 355px;
-      width: 109px;
-      height: 98px;
-  }
+    position: absolute;
+    top: 20%;
+    left: 29%;
+    width: 109px;
+    height: 98px;
+    animation: rotationFleurs var(--speed) linear infinite;
+    transform-origin: 50% 45%;
+}
 
-  .orangeCatMenu {
-      position: absolute;
-      position: absolute;
-      top: 670px;
-      left: 101px;
-      width: 105px;
-      height: 95px;
-  }
+.orangeCatMenu {
+  position: absolute;
+  bottom: 37%;
+  left: 101px;
+  width: 105px;
+  height: 95px;
+  animation: floating-animation 6s 2s infinite ease-in-out;
+}
 
   .blackCatMenu {
       position: absolute;
-      position: absolute;
-      top: 445px;
+      top: 390px;
       left: 921px;
-      width: 135px;
-      height: 128px;
+      width: 120px;
+      animation: floating-animation 6s 2s infinite ease-in-out;
   }
 }
