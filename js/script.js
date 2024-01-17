@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Ajout de la classe 'titleAnimation' à chaque lien du menu
       menuLinks.forEach((link) => {
-          link.classList.add('titleAnimation');
+          link.classList.add('title-animation');
       });
 
       // Déclenchement de l'animation avec un délai
