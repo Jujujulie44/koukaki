@@ -308,7 +308,7 @@ footer {
 /* Styles pour le menu burger */
 .main-navigation {
   display: flex;
-  position: fixed;
+  position: relative;
   width: 1440px;
 }
 .main-navigation ul {

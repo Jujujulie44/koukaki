@@ -340,10 +340,9 @@ span {
 
 /* Styles pour le menu burger */
 
-
 .main-navigation {
   display: flex;
-  position: fixed;
+  position:relative;
   width: 1440px;
 
   ul {
@@ -486,7 +485,6 @@ span {
   a {
       text-decoration: none;
   }
-
 
   .logoFullscreen {
       position: absolute;

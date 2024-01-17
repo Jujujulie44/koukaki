@@ -111,10 +111,18 @@ document.addEventListener('DOMContentLoaded', function () {
       // Sélection des éléments menu fullscreen et tous les liens du menu
       const menuLinks = fullscreenMenu.querySelectorAll('ul li a');
 
-      // Ajout de la classe 'titleAnimation' à chaque lien du menu
+      // Ajout de la classe 'title-animation' à chaque lien du menu
       menuLinks.forEach((link) => {
           link.classList.add('title-animation');
       });
+
+      //Ajout d'un écouteur d'evénement click à chaque liens du menuBurger
+
+      link.addEventListener('click', function (){
+        menuBurger.classList.remove('active');
+        fullscreenMenu.classList.remove('open');
+      });
+    });
 
       // Déclenchement de l'animation avec un délai
       setTimeout(() => {
@@ -128,6 +136,5 @@ document.addEventListener('DOMContentLoaded', function () {
           });
       }, 150);
   });
-});
 
 
