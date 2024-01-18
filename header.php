@@ -58,6 +58,6 @@
             <p>studio koukaki</p>
             
 
-        </div>
+        </div><!-- #fullscreen-menu -->
     </header><!-- #masthead -->
 

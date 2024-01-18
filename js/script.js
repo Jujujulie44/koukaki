@@ -23,6 +23,7 @@ sections.forEach((section) => {
 
 
 // Variables pour le mouvement des nuages
+
 let cloudPositionX = 0;
 
 // Éléments pour le mouvement des nuages
@@ -122,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menuBurger.classList.remove('active');
         fullscreenMenu.classList.remove('open');
       });
+      
     });
 
       // Déclenchement de l'animation avec un délai

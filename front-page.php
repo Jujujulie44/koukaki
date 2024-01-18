@@ -10,7 +10,7 @@ get_header();
                     <source src="<?php echo get_stylesheet_directory_uri().'/assets/video_koukaki.mp4'; ?>" type="video/mp4">
                 </video>
             </div>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <img class="logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
             
         </section>
         <section id="#story" class="story">
@@ -23,7 +23,7 @@ get_header();
             </article>
 
             <!-- CHARATERES -->
-                
+
             
                 <?php get_template_part('template-parts/personnages') ;?>
             
