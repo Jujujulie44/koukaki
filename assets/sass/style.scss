@@ -92,13 +92,13 @@ span {
  }
 
 .title-animation:nth-child(1) {
-  animation: fade-In-From-Bottom 1s ease-in-out forwards;
+  animation: fade-In-From-Bottom 0.6s ease-in-out forwards;
 }
 
  
  .title-animation:nth-child(2) {
-  animation: fade-In-From-Bottom 1.3s ease-in-out forwards;
-  animation-delay: 0.4s; /* Décalage pour le deuxième élément "histoire" */
+  animation: fade-In-From-Bottom 0.8s ease-in-out forwards;
+  animation-delay: 0.3s; /* Décalage pour le deuxième élément "histoire" */
 }
 
 @keyframes title-animation {
@@ -155,7 +155,7 @@ span {
  }
 
  .story h2::after, #studio h2::before {
-  transform-origin: 50% 45%;
+  transform-origin: 77px 77px;
  }
 
  #studio h2::after {
@@ -316,6 +316,10 @@ span {
 .swiper-slide img {
   display: block;
   width: 100%;
+}
+
+.swiper-3d {
+  perspective: none;
 }
 /*
 .swiper-slide {
@@ -640,5 +644,19 @@ span {
   .main-navigation button {
     margin-left: 20px;
   }
-}
 
+  .section-nomination {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    margin-bottom: 200px;
+  }
+
+  .nomination_text {
+    font-size: 22px;
+    margin-bottom: 8em;
+    padding-top: 10%;
+    text-align: center;
+  }
+}

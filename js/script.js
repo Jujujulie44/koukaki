@@ -9,7 +9,7 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
 
       }
   });
-}, { rootMargin: '0px', threshold: 0.5 });
+}, { rootMargin: '0px', threshold: 0.25 });
 
 
 // Sélection des sections à animer
@@ -115,28 +115,29 @@ document.addEventListener('DOMContentLoaded', function () {
       // Ajout de la classe 'title-animation' à chaque lien du menu
       menuLinks.forEach((link) => {
           link.classList.add('title-animation');
+          //Ajout d'un écouteur d'evénement click à chaque liens du menuBurger
+          link.addEventListener('click', function (){
+            menuBurger.classList.remove('active');
+            fullscreenMenu.classList.remove('open');
+          });
       });
-
-      //Ajout d'un écouteur d'evénement click à chaque liens du menuBurger
-
-      link.addEventListener('click', function (){
-        menuBurger.classList.remove('active');
-        fullscreenMenu.classList.remove('open');
-      });
-      
-    });
-
       // Déclenchement de l'animation avec un délai
       setTimeout(() => {
-          menuLinks.forEach((link, index) => {
-              const delay = index === 0 ? 400 : index * 600;
+        menuLinks.forEach((link, index) => {
+            const delay = index === 0 ? 400 : index * 600;
 
-              // Ajout de la classe 'visibility' avec le délai spécifié
-              setTimeout(() => {
-                  link.classList.add('visibility');
-              }, delay);
-          });
-      }, 150);
+            // Ajout de la classe 'visibility' avec le délai spécifié
+            setTimeout(() => {
+                link.classList.add('visibility');
+            }, delay);
+        });
+    }, 150);
+      
+
+     }); 
+  
+
+      
   });
 
 

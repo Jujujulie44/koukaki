@@ -13,7 +13,7 @@ get_header();
             <img class="logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
             
         </section>
-        <section id="#story" class="story">
+        <section id="story" class="story">
             <h2>
                 <span class="title">L'</span>
                 <span class="title">histoire</span>
