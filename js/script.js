@@ -13,7 +13,7 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
 
 
 // Sélection des sections à animer
-const sections = document.querySelectorAll('span');
+const sections = document.querySelectorAll('span.title');
 
 // Ajout de l'observateur d'intersection à chaque section
 sections.forEach((section) => {

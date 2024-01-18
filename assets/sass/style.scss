@@ -2,6 +2,12 @@
   --speed : 8s; 
 }
 
+.main-navigation {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
  /*** SECTION FADE-IN HEADER ***/
 
  .container-video {
@@ -10,7 +16,7 @@
 
   #background-video {
     object-fit: cover;
-    @media (max-width: 599px) {
+    @media (max-width: 768px) {
       display:none;
     }
   }
@@ -84,7 +90,7 @@
    animation: fadeUp_purple_background 1s;
  }
 
-span {
+span.title {
   display: inline-block;
   opacity: 0;
   transform: translateY(100px);
@@ -161,6 +167,10 @@ span {
  #studio h2::after {
   width: 109px;
   height: 109px;
+ }
+
+ #studio h2 {
+  overflow: visible;
  }
 
 /**KEYFRAMES ROTATION FLEURS **/
@@ -345,9 +355,9 @@ span {
 /* Styles pour le menu burger */
 
 .main-navigation {
+  height: 80px;
   display: flex;
   position:relative;
-  width: 1440px;
 
   ul {
       font-weight: 800;
@@ -364,8 +374,7 @@ span {
 .burgerBtn {
   width: 42px;
   height: 24px;
-  margin-top: 27px;
-  margin-left: 450px;
+  margin-right: 40px;
   cursor: pointer;
   position: relative;
 
@@ -606,10 +615,6 @@ span {
     }
   }
 
-  .burgerBtn {
-    margin-left: 20px; /* Ajustez la marge pour s'adapter à l'écran plus petit */
-  }
-
   .fullscreenMenu {
     top: 60px;
     width: 100%;
@@ -629,8 +634,12 @@ span {
   .hibiscusMenu,
   .blueCatMenu,
   .orangeCatMenu,
-  .blackCatMenu {
+  .blackCatMenu{
     display: none; 
+  }
+
+  .site-footer ul::after {
+    animation: none;
   }
 
   .site-navigation .title-site {
@@ -658,5 +667,16 @@ span {
     margin-bottom: 8em;
     padding-top: 10%;
     text-align: center;
+  }
+
+
+  .big_cloud {
+    top: 67%;
+    left: calc(22% + 210px);
+  }
+
+  .little_cloud {
+    top: 70%;
+    right: calc(5% + 320px);
   }
 }
