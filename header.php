@@ -43,7 +43,7 @@
             <img class ="flowerOrangeMenu" src="<?php echo get_theme_file_uri() . '/assets/images/flower-orange.png'; ?>" alt="logo menu fullscreen">
             <img class ="sunflowerMenu" src="<?php echo get_theme_file_uri() . '/assets/images/Sunflower.png'; ?>" alt="logo menu fullscreen">
             <img class ="randomflowerMenu" src="<?php echo get_theme_file_uri() . '/assets/images/random_flower.png'; ?>" alt="logo menu fullscreen">
-            <img class ="hibiscusMenu" src="<?php echo get_theme_file_uri() . '/assets/images/hibiscus_footer.png'; ?>" alt="logo menu fullscreen">
+            <img class ="hibiscusMenu" src="<?php echo get_theme_file_uri() . '/assets/images/hibiscus.png'; ?>" alt="logo menu fullscreen">
             <img class ="blueCatMenu" src="<?php echo get_theme_file_uri() . '/assets/images/cat-purple.png'; ?>" alt="logo menu fullscreen">
             <img class ="orangeCatMenu" src="<?php echo get_theme_file_uri() . '/assets/images/cat-orange.png'; ?>" alt="logo menu fullscreen">
             <img class ="blackCatMenu" src="<?php echo get_theme_file_uri() . '/assets/images/cat-black.png'; ?>" alt="logo menu fullscreen">

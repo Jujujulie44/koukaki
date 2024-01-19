@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-  --speed: 8s;
+  --speed: 14s;
 }
 
 .main-navigation {
@@ -145,8 +145,13 @@ span.title {
   animation: rotationFleurs var(--speed) linear infinite;
 }
 
-.story h2::after, #studio h2::before {
+.story h2::after,
+.site-footer::before {
   transform-origin: 77px 77px;
+}
+
+#studio h2::before {
+  transform-origin: 101px 100px;
 }
 
 #studio h2::after {
@@ -156,6 +161,10 @@ span.title {
 
 #studio h2 {
   overflow: visible;
+}
+
+.site-footer::after {
+  transform-origin: 86px 86px;
 }
 
 /**KEYFRAMES ROTATION FLEURS **/
@@ -483,20 +492,19 @@ footer {
 
 .randomflowerMenu {
   position: absolute;
-  top: 350px;
-  left: 1403px;
+  top: 15%;
+  right: -3%;
   height: 75px;
   animation: rotationFleurs var(--speed) linear infinite;
 }
 
 .hibiscusMenu {
-  width: 150px;
-  height: 150px;
+  animation: rotationFleurs var(--speed) linear infinite;
+  width: 30%;
+  height: 46%;
   position: absolute;
-  bottom: 289px;
-  right: 0px;
-  /*animation: rotationFleurs var(--speed) linear infinite;
-  transform-origin: 50% 45%;*/
+  bottom: 6%;
+  left: 85%;
 }
 
 .blueCatMenu {
@@ -551,6 +559,11 @@ footer {
   .hibiscusMenu {
     display: none !important;
   }
+  .site-footer::after {
+    animation: none !important;
+    top: 9%;
+    left: 89%;
+  }
   #studio h2::before {
     animation: none !important;
     top: 97%;
@@ -585,19 +598,19 @@ footer {
   .big_cloud {
     top: 67%;
     left: calc(22% + 210px);
-    animation: none;
+    transform: none;
   }
   .little_cloud {
-    animation: none;
-    top: 70%;
-    right: calc(5% + 320px);
+    transform: none;
+    top: 73%;
+    right: calc(1% + 295px);
   }
   .section-nomination {
     align-items: center;
     display: flex;
     justify-content: flex-start;
     flex-direction: column-reverse;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
   .nomination_text {
     font-size: 22px;

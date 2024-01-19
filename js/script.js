@@ -43,7 +43,7 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("scrollend", () => {
-  root.style.setProperty('--speed', '8s')
+  root.style.setProperty('--speed', '14s')
 })
   
 
