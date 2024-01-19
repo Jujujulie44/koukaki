@@ -33,7 +33,7 @@ const locationElement = document.querySelector("#place");
 
 // Gestion du scroll pour impacter le mouvement des nuages et la rotation des fleurs
 window.addEventListener("scroll", () => {
-    root.style.setProperty('--speed', '0.5s')
+    root.style.setProperty('--speed', '0.7s')
 
     // Déplace les nuages en fonction du scroll
     cloudPositionX = Math.round(0 - (window.scrollY - locationElement.offsetTop - 200));

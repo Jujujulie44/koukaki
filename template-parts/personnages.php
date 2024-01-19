@@ -1,3 +1,4 @@
+ <!-- CHARATERES -->
 <article class="characters-swiper" id="characters">
   <h3><span class="title">Les personnages</span></h3>
           <?php

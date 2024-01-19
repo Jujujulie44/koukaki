@@ -164,7 +164,11 @@ span.title {
 }
 
 .site-footer::after {
-  transform-origin: 86px 86px;
+  transform-origin: 86px 84px;
+}
+
+.story__article::after {
+  transform-origin: 94px 94px;
 }
 
 /**KEYFRAMES ROTATION FLEURS **/
@@ -177,6 +181,7 @@ span.title {
   }
 }
 /*** SECTION STUDIO KOUKAKI ***/
+section,
 #story,
 #studio,
 footer {
@@ -275,7 +280,8 @@ footer {
 /*** SWIPER ***/
 .swiper {
   margin: 0 auto;
-  width: 1226px;
+  width: 115%;
+  padding-bottom: 12%;
 }
 
 .characters-swiper {
@@ -288,6 +294,10 @@ footer {
   align-self: flex-start;
   z-index: 2;
   background-image: url("../images/orange_characters_bg.png");
+}
+
+.swiper-3d .swiper-wrapper {
+  margin-bottom: 10px;
 }
 
 .characters-swiper div {
@@ -304,10 +314,6 @@ footer {
 .swiper-slide img {
   display: block;
   width: 100%;
-}
-
-.swiper-3d {
-  perspective: none;
 }
 
 /*
@@ -569,12 +575,12 @@ footer {
     top: 97%;
     left: -14%;
   }
+  /**** SWIPER ***/
   .swiper {
-    width: 50%;
+    margin-left: 0.6em !important;
+    margin-bottom: -200px;
   }
-  .swiper-slide img {
-    width: 260px;
-  }
+  /******************************/
   .fullscreenMenu {
     top: 60px;
     width: 100%;
@@ -597,13 +603,13 @@ footer {
   }
   .big_cloud {
     top: 67%;
-    left: calc(22% + 210px);
+    left: calc(30% + 210px);
     transform: none;
   }
   .little_cloud {
     transform: none;
     top: 73%;
-    right: calc(1% + 295px);
+    right: calc(-4% + 295px);
   }
   .section-nomination {
     align-items: center;

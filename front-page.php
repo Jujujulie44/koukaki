@@ -13,6 +13,7 @@ get_header();
             <img class="logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
             
         </section>
+         <!-- STORY -->
         <section id="story" class="story">
             <h2>
                 <span class="title">L'</span>
@@ -24,10 +25,8 @@ get_header();
 
             <!-- CHARATERES -->
 
-            
                 <?php get_template_part('template-parts/personnages') ;?>
             
-
             <!--LIEU-->
             <article id="place" class="place_background">
                 <div>
@@ -42,8 +41,7 @@ get_header();
 
             </article>
         </section>
-
-
+         <!-- STUDIO -->
         <section id="studio">
             <h2>
                 <span class="title">Koukaki</span>
