@@ -249,7 +249,7 @@ footer {
   max-width: 275px;
 }
 
-/****FOOTER **/
+/**** FOOTER ****/
 .site-footer {
   flex-direction: column;
   padding-top: 12em;
@@ -377,10 +377,6 @@ footer {
 }
 
 /* Styles pour le menu en plein écran */
-/* 
-#title-site{
-  font-weight: bold!important;
-}*/
 .site-navigation .title-site {
   position: fixed;
 }
@@ -447,12 +443,14 @@ footer {
 .fullscreenMenu a {
   text-decoration: none;
 }
-.fullscreenMenu .logoFullscreen {
+
+.logoFullscreen {
   position: absolute;
   left: 627px;
   top: 45px;
 }
-.fullscreenMenu .orchidMenu {
+
+.orchidMenu {
   position: absolute;
   left: -60px;
   width: 150px;
@@ -460,42 +458,48 @@ footer {
   top: 70px;
   animation: rotationFleurs var(--speed) linear infinite;
 }
-.fullscreenMenu .flowerOrangeMenu {
+
+.flowerOrangeMenu {
   position: absolute;
   left: 23%;
   bottom: 55%;
   animation: rotationFleurs var(--speed) linear infinite;
 }
-.fullscreenMenu .flowerMenu {
+
+.flowerMenu {
   position: absolute;
   top: 435px;
   left: 289px;
   width: 70px;
   height: 70px;
 }
-.fullscreenMenu .sunflowerMenu {
+
+.sunflowerMenu {
   position: absolute;
   top: 90px;
   left: 950px;
   animation: rotationFleurs var(--speed) linear infinite;
 }
-.fullscreenMenu .randomflowerMenu {
+
+.randomflowerMenu {
   position: absolute;
   top: 350px;
   left: 1403px;
   height: 75px;
   animation: rotationFleurs var(--speed) linear infinite;
 }
-.fullscreenMenu .hibiscusMenu {
+
+.hibiscusMenu {
   width: 150px;
   height: 150px;
   position: absolute;
-  bottom: 325px;
+  bottom: 289px;
   right: 0px;
   /*animation: rotationFleurs var(--speed) linear infinite;
   transform-origin: 50% 45%;*/
 }
-.fullscreenMenu .blueCatMenu {
+
+.blueCatMenu {
   position: absolute;
   top: 20%;
   left: 29%;
@@ -504,7 +508,8 @@ footer {
   animation: rotationFleurs var(--speed) linear infinite;
   transform-origin: 50% 45%;
 }
-.fullscreenMenu .orangeCatMenu {
+
+.orangeCatMenu {
   position: absolute;
   bottom: 37%;
   left: 101px;
@@ -512,7 +517,8 @@ footer {
   height: 95px;
   animation: floating-animation 6s 2s infinite ease-in-out;
 }
-.fullscreenMenu .blackCatMenu {
+
+.blackCatMenu {
   position: absolute;
   top: 390px;
   left: 921px;
@@ -530,21 +536,6 @@ footer {
   #background-video {
     display: none;
   }
-  .swiper {
-    width: 50%;
-  }
-  .characters-swiper h3 {
-    margin-left: 20px; /* Ajustez la marge pour s'adapter à l'écran plus petit */
-  }
-  .fullscreenMenu {
-    top: 60px;
-    width: 100%;
-    height: 100%;
-  }
-  .logoFullscreen {
-    left: 50%;
-    transform: translateX(-50%);
-  }
   .orchidMenu,
   .flowerOrangeMenu,
   .flowerMenu,
@@ -552,12 +543,32 @@ footer {
   .randomflowerMenu,
   .hibiscusMenu,
   .blueCatMenu,
-  .orangeCatMenu,
   .blackCatMenu {
-    display: none;
+    animation: none !important;
   }
-  .site-footer ul::after {
-    animation: none;
+  .flowerOrangeMenu,
+  .blueCatMenu,
+  .hibiscusMenu {
+    display: none !important;
+  }
+  #studio h2::before {
+    animation: none !important;
+    top: 97%;
+    left: -14%;
+  }
+  .swiper {
+    width: 50%;
+  }
+  .swiper-slide img {
+    width: 260px;
+  }
+  .fullscreenMenu {
+    top: 60px;
+    width: 100%;
+    height: 100%;
+  }
+  .logoFullscreen {
+    transform: translateX(-180%);
   }
   .site-navigation .title-site {
     position: static;
@@ -567,6 +578,19 @@ footer {
   }
   .main-navigation button {
     margin-left: 20px;
+  }
+  .characters-swiper h3 {
+    margin-left: 20px; /* Ajustez la marge pour s'adapter à l'écran plus petit */
+  }
+  .big_cloud {
+    top: 67%;
+    left: calc(22% + 210px);
+    animation: none;
+  }
+  .little_cloud {
+    animation: none;
+    top: 70%;
+    right: calc(5% + 320px);
   }
   .section-nomination {
     align-items: center;
@@ -581,13 +605,8 @@ footer {
     padding-top: 10%;
     text-align: center;
   }
-  .big_cloud {
-    top: 67%;
-    left: calc(22% + 210px);
-  }
-  .little_cloud {
-    top: 70%;
-    right: calc(5% + 320px);
+  .site-footer ul::after {
+    animation: none;
   }
 }
 
