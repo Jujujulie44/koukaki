@@ -30,6 +30,10 @@
 
  }
 
+ .banner {
+  animation:fade-in-from-top 0.5s ease-in-out ;
+ }
+
 /***Keyframes montant de bas en haut ***/
  @keyframes fade-In-From-Bottom { /* ANIMATION ENTRANTE VERS LE BAS*/
   0% {
@@ -200,7 +204,7 @@ span.title {
  
  
  /*** SECTION STUDIO KOUKAKI ***/
- section,
+
  #story,
  #studio,
  footer {
@@ -306,7 +310,7 @@ span.title {
 
 .swiper {
   margin: 0 auto;
-  width: 115%;
+  width: 92%;
   padding-bottom: 12%;
 }
 
@@ -325,7 +329,7 @@ span.title {
 
 
 .characters-swiper div{
-  flex: 1; 
+  flex: none !important; 
 }
 
 .swiper-slide {
@@ -338,28 +342,12 @@ span.title {
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  
+  width: 90%;
 }
 
-
-/*
-.swiper-slide {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 18px;
-  overflow: hidden;
+.swiper-3d .swiper-wrapper {
+  margin-bottom: 10px;
 }
-.swiper-slide-image {
-  width: 100%;
-}
-.swiper-pagination {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-}
-*/
 
 
 /**** MENU BURGER ***/ 
@@ -642,12 +630,21 @@ span.title {
   }
 
   /**** SWIPER ***/
+
+  .swiper-3d .swiper-wrapper {
+    margin-bottom: 10px;
+    transform: none !important;
+  }
   
   .swiper {
     margin-left: 0.6em !important;
     margin-bottom: -200px;
   }
 
+  .story #characters {
+    flex-direction: column;
+    padding-bottom: 15%;
+  }
   /******************************/
   
   .fullscreenMenu {

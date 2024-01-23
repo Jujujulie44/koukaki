@@ -9,7 +9,7 @@ function theme_enqueue_styles() {
 
     wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), false, true);
     // Enqueue le script du thème enfant
-    wp_enqueue_script('script', get_theme_file_uri('/js/script.js'), array('jquery', 'swiper'), '1.0.0', true);
+    wp_enqueue_script('script', get_theme_file_uri('/js/script.js'), array('jquery', 'swiper'),time(), true);
 
 }
 

@@ -30,6 +30,10 @@
   animation: fade-In-From-Bottom 2s 300ms, floating-animation 6s 2s infinite ease-in-out;
 }
 
+.banner {
+  animation: fade-in-from-top 0.5s ease-in-out;
+}
+
 /***Keyframes montant de bas en haut ***/
 @keyframes fade-In-From-Bottom { /* ANIMATION ENTRANTE VERS LE BAS*/
   0% {
@@ -181,7 +185,6 @@ span.title {
   }
 }
 /*** SECTION STUDIO KOUKAKI ***/
-section,
 #story,
 #studio,
 footer {
@@ -280,7 +283,7 @@ footer {
 /*** SWIPER ***/
 .swiper {
   margin: 0 auto;
-  width: 115%;
+  width: 92%;
   padding-bottom: 12%;
 }
 
@@ -296,12 +299,8 @@ footer {
   background-image: url("../images/orange_characters_bg.png");
 }
 
-.swiper-3d .swiper-wrapper {
-  margin-bottom: 10px;
-}
-
 .characters-swiper div {
-  flex: 1;
+  flex: none !important;
 }
 
 .swiper-slide {
@@ -313,26 +312,13 @@ footer {
 
 .swiper-slide img {
   display: block;
-  width: 100%;
+  width: 90%;
 }
 
-/*
-.swiper-slide {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 18px;
-  overflow: hidden;
+.swiper-3d .swiper-wrapper {
+  margin-bottom: 10px;
 }
-.swiper-slide-image {
-  width: 100%;
-}
-.swiper-pagination {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-}
-*/
+
 /**** MENU BURGER ***/
 /* Styles pour le menu burger */
 .main-navigation {
@@ -576,9 +562,17 @@ footer {
     left: -14%;
   }
   /**** SWIPER ***/
+  .swiper-3d .swiper-wrapper {
+    margin-bottom: 10px;
+    transform: none !important;
+  }
   .swiper {
     margin-left: 0.6em !important;
     margin-bottom: -200px;
+  }
+  .story #characters {
+    flex-direction: column;
+    padding-bottom: 15%;
   }
   /******************************/
   .fullscreenMenu {

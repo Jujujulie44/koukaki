@@ -63,13 +63,14 @@ const swiper = new Swiper('.swiper', {
   coverflowEffect: {
   rotate: 0,                      
   depth: 200,                     
-  stretch: 0,                    
+  stretch: 60,                    
   slideShadows: false,            
   },
   autoplay: isMobile ? false : {
   delay: 2000,
   disableOnInteraction: false,
   },
+  
   breakpoints:{
     0: {
       slidesPerView: 1,
@@ -78,7 +79,7 @@ const swiper = new Swiper('.swiper', {
       slidesPerView: 2,
     },
     996:{
-      slidesPerView: 5,
+      slidesPerView: 3,
     }
   }
 });
