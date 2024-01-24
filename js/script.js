@@ -1,6 +1,5 @@
-//console.log("hello world");
-
 // Crée un observateur pour gérer l'animation
+
 const sectionObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -19,6 +18,8 @@ const sections = document.querySelectorAll('span.title');
 sections.forEach((section) => {
   sectionObserver.observe(section);
 });
+
+
 
 
 
@@ -119,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
           //Ajout d'un écouteur d'evénement click à chaque liens du menuBurger
           link.addEventListener('click', function (){
             menuBurger.classList.remove('active');
+            // Ecouteur d'événement pour la fermeture du MenuBurger
             fullscreenMenu.classList.remove('open');
           });
       });
